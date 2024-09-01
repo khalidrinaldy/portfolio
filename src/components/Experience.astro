@@ -1,0 +1,27 @@
+---
+import { ExperienceData } from "../data/ExperienceData";
+import type { Experience } from "../models/Experience";
+import { format } from "date-fns";
+
+const { experience } = Astro.props;
+---
+
+<a href={experience.companyUrl} target="_blank">
+  <div
+    class="flex flex-col items-stretch mb-12 px-4 py-4 rounded-md bg-transparent hover:bg-tertiary-main hover:bg-opacity-[.12]"
+  >
+    <div class="flex flex-col lg:flex-row md:flex-col sm:flex-col justify-between lg:items-center md:items-start sm:items-start items-start mb-2">
+      <p class="text-xs text-grey-700 font-bold uppercase">
+        {format(experience.start, "MMMM yyyy")} - {
+          experience.end ? format(experience.end, "MMMM yyyy") : "Present"
+        }
+      </p>
+      <div class="flex flex-row items-center text-md text-grey-800 font-medium">
+        <p class="mr-2">{experience.title}</p>
+        <p class="text-xs">⭑</p>
+        <p class="ml-2">{experience.company}</p>
+      </div>
+    </div>
+    <p class="text-md text-grey-700 font-regular">{experience.description}</p>
+  </div></a
+>

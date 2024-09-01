@@ -1,11 +1,16 @@
 ---
-import Hello from '../components/Hello.astro';
-import Layout from '../layouts/Layout.astro';
+import Background from "../components/Background.astro";
+import ExperienceSection from "../components/ExperienceSection.astro";
+import Hello from "../components/Hello.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Khalid Rinaldy">
-	<Hello />
+  <Hello />
+  <div class="lg:pl-24 lg:pr-32">
+    <Background />
+    <ExperienceSection />
+  </div>
 </Layout>
 
-<style>
-</style>
+<style></style>

@@ -18,6 +18,18 @@ export default {
     fontFamily: {
       sans: ["IBM Plex Sans", "sans-serif"],
     },
+    fontWeight: {
+      thin: '100',
+      hairline: '100',
+      extralight: '200',
+      light: '300',
+      normal: '400',
+      medium: '500',
+      semibold: '600',
+      bold: '700',
+      extrabold: '800',
+      black: '900',
+    },
     colors: {
       text: {
         primary: "#242424",
@@ -28,6 +40,9 @@ export default {
       },
       secondary: {
         main: "#8ca6db",
+      },
+      tertiary: {
+        main: "#6d72c3",
       },
       green: {
         lightest: "#d4f7d8",
@@ -54,6 +69,9 @@ export default {
       minHeight: {
         "100vh": "100vh",
       },
+      opacity: {
+        '12': '0.12',
+      }
     },
   },
   variants: {
