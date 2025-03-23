@@ -1,0 +1,16 @@
+---
+import { ProjectData } from "../data/ProjectData";
+import FeaturedProject from "./FeaturedProject.astro";
+---
+<div
+  class="flex flex-col lg:flex-row lg:justify-between md:flex-row sm:flex-col mb-24"
+>
+  <div
+    class="lg:flex-1 lg:basis-1/4 lg:mr-12 lg:mb-0 md:mb-4 sm:mb-4 mb-4 mr-12"
+  >
+    <p class="text-lg text-grey-700 font-bold">FEATURED PROJECTS</p>
+  </div>
+  <div class="flex flex-col lg:flex-1 lg:basis-3/5">
+    {ProjectData.map((data) => <FeaturedProject project={data} />)}
+  </div>
+</div>
